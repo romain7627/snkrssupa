@@ -1,0 +1,78 @@
+.wc-block-product-template {
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 100%;
+  list-style: none;
+  padding: 0;
+}
+.wc-block-product-template.wc-block-product-template {
+  background: none;
+}
+.wc-block-product-template.is-flex-container {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1.25em;
+}
+.wc-block-product-template.is-flex-container > li {
+  margin: 0;
+  width: 100%;
+}
+@media (min-width: 600px) {
+  .wc-block-product-template.is-flex-container.is-flex-container.columns-2 > li {
+    width: calc((100% / 2) - 1.25em + (1.25em / 2));
+  }
+  .wc-block-product-template.is-flex-container.is-flex-container.columns-3 > li {
+    width: calc((100% / 3) - 1.25em + (1.25em / 3));
+  }
+  .wc-block-product-template.is-flex-container.is-flex-container.columns-4 > li {
+    width: calc((100% / 4) - 1.25em + (1.25em / 4));
+  }
+  .wc-block-product-template.is-flex-container.is-flex-container.columns-5 > li {
+    width: calc((100% / 5) - 1.25em + (1.25em / 5));
+  }
+  .wc-block-product-template.is-flex-container.is-flex-container.columns-6 > li {
+    width: calc((100% / 6) - 1.25em + (1.25em / 6));
+  }
+}
+
+/**
+ * Default spacing between product elements
+ */
+:where(.wc-block-product-template .wc-block-product) > * {
+  margin-bottom: 0.75rem;
+  margin-top: 0;
+}/*# sourceMappingURL=style.css.map */ay: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  padding: 0 0.5em;
+  position: relative;
+  overflow: hidden;
+}
+.wc-block-product-categories__button svg {
+  fill: currentColor;
+  outline: none;
+}
+.rtl .wc-block-product-categories__button svg {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.wc-block-product-categories__button:active {
+  color: currentColor;
+}
+.wc-block-product-categories__button:disabled, .wc-block-product-categories__button[aria-disabled=true] {
+  cursor: default;
+  opacity: 0.3;
+}
+.wc-block-product-categories__button[aria-disabled=true]:focus, .wc-block-product-categories__button:disabled:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}/*# sourceMappingURL=style.css.map */

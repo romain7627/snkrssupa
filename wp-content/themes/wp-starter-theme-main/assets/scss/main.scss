@@ -1,0 +1,25 @@
+/* ======================
+    CSS Start
+====================== */
+
+/* Globals */
+@import 'globals/variables';
+@import 'globals/animations';
+@import 'globals/base';
+
+/* Partials */
+@import 'partials/header';
+@import 'partials/footer';
+
+/* Components */
+// @import 'components/button';
+
+/* Pages */
+// @import 'pages/home';
+
+/* Responsive */
+@import 'globals/responsive';
+
+/* ======================
+    CSS End
+====================== */

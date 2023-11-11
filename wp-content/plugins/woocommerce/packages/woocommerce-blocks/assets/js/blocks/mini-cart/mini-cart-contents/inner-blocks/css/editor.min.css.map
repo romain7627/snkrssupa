@@ -1,0 +1,1 @@
+{"version":3,"sources":["..\\mini-cart-footer-block\\editor.scss"],"names":[],"mappings":"AAAA,8EACC,UAAA","file":"editor.min.css","sourcesContent":[".editor-styles-wrapper .wc-block-mini-cart__footer .block-editor-inner-blocks {\n\twidth: 100%;\n}\n"]}

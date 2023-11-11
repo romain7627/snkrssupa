@@ -1,0 +1,21 @@
+{
+  "name": "wp-starter-theme",
+  "version": "1.6.0",
+  "description": "Wordpress Starter Theme for Romain Trani",
+  "main": "index.js",
+  "scripts": {
+    "tailwind": "npx tailwindcss -i ./assets/css/tailwind/tailwind-input.css -o ./assets/css/tailwind/tailwind-output.min.css --minify --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "wordpress",
+    "wp",
+    "starter",
+    "theme"
+  ],
+  "author": "Romain Trani",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}

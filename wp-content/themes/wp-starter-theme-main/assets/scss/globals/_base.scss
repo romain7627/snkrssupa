@@ -1,0 +1,44 @@
+/*
+|---------------------------------
+| globals/base
+|---------------------------------
+*/
+
+body {
+    background-color: var(--c-background-darker);
+    font-family: var(--f-default);
+    font-size: 14px;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+ul {
+    list-style: none;
+}
+
+a:not([class]) {
+    color: var(--c-primary);
+    text-decoration: none;
+    transition: var(--a-transition);
+}
+
+button {
+    cursor: pointer;
+}
+
+.l-constrain {
+    width: 100%;
+    max-width: var(--constrain-width);
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+i[class^="ri-"] {
+    font-size: 24px;
+}
+
+strong {
+    font-weight: 800;
+}

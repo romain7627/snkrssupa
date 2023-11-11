@@ -1,0 +1,20 @@
+{
+    "name": "skyyinfinity/wp-starter-theme",
+    "description": "Wordpress Starter Theme for Studio Seth",
+    "type": "wordpress-theme",
+    "require": {
+        "php": "^8.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "WPStarterTheme\\App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "SkyyInfinity",
+            "email": "dylan.hautecoeur@gmail.com"
+        }
+    ]
+}

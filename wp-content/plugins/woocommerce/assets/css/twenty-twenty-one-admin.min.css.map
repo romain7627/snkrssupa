@@ -1,0 +1,1 @@
+{"version":3,"sources":["twenty-twenty-one-admin.scss"],"names":[],"mappings":"AAOI,kFACC,yBAAA","file":"twenty-twenty-one-admin.min.css","sourcesContent":["/**\n * Admin\n */\n.wp-admin.woocommerce-admin-page {\n\ttable.wp-list-table {\n\t\ttr.type-product {\n\t\t\ttd.thumb {\n\t\t\t\timg {\n\t\t\t\t\tmax-width: 40px !important;\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}\n"]}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["..\\review-sort-select\\style.scss","style.css"],"names":[],"mappings":"AAAA;EACC,iBAAA;ACCD","file":"style.css","sourcesContent":[".wc-block-components-review-sort-select {\n\ttext-align: right;\n}\n",".wc-block-components-review-sort-select {\n  text-align: right;\n}"]}-components-review-list.wc-block-components-review-list {\n  margin: 0;\n}"]}

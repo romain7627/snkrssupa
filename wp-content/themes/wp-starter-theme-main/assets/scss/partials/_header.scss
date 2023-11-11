@@ -1,0 +1,204 @@
+/*
+|---------------------------------
+| partials/header
+|---------------------------------
+*/
+
+header#l-header {
+    z-index: 999;
+    border-bottom: 1px solid var(--c-border);
+
+    .middle-bar {
+        padding: 24px 0;
+        background-color: #fff;
+
+        > .l-constrain {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 32px;
+
+            .widget-menu {
+
+                > ul {
+                    display: flex;
+                    align-items: center;
+
+                    > li {
+                        padding: 16px 0;
+
+                        a {
+                            padding: 8px 16px;
+                            color: rgba(0, 0, 0, 0.5);
+    
+                            &:hover,
+                            &[current-page="page"] {
+                                color: #000;
+                            }
+                        }
+                        &.menu-item-has-children {
+                            position: relative;
+
+                            > a {
+                                &::after {
+                                    content: "";
+                                    display: inline-block;
+                                    margin-left: 4px;
+                                    right: 0;
+                                    width: 16px;
+                                    height: 16px;
+                                    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><path d="M11.9997 13.1714L16.9495 8.22168L18.3637 9.63589L11.9997 15.9999L5.63574 9.63589L7.04996 8.22168L11.9997 13.1714Z"></path></svg>');
+                                    background-repeat: no-repeat;
+                                    background-size: contain;
+                                    background-position: center;
+                                    vertical-align: middle;
+                                }
+                            }
+                            .sub-menu {
+                                display: none;
+                                position: absolute;
+                                top: 100%;      
+                                left: 0;
+                                width: max-content;
+                                background-color: var(--c-background);
+                                flex-direction: column;
+                                border: 1px solid var(--c-border);
+                                border-radius: 0.3rem;
+                                animation: fadeFromBottom var(--a-transition) forwards;
+    
+                                li {
+                                    &.menu-item-has-children {
+                                        position: relative;
+
+                                        .sub-menu {
+                                            display: none;
+                                            position: absolute;
+                                            top: 0;
+                                            left: 100%;
+                                            width: max-content;
+                                            background-color: var(--c-background);
+                                            flex-direction: column;
+                                            border: 1px solid var(--c-border);
+                                            border-radius: 0.3rem;
+                                        }
+                                        &:hover {
+                                            > .sub-menu {
+                                                display: flex;
+                                            }
+                                        }
+                                        > a {
+
+                                            &::after {
+                                                content: "";
+                                                display: inline-block;
+                                                margin-left: 4px;
+                                                right: 0;
+                                                width: 16px;
+                                                height: 16px;
+                                                background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><path d="M13.1714 12.0007L8.22168 7.05093L9.63589 5.63672L15.9999 12.0007L9.63589 18.3646L8.22168 16.9504L13.1714 12.0007Z"></path></svg>');
+                                                background-repeat: no-repeat;
+                                                background-size: contain;
+                                                background-position: center;
+                                                vertical-align: middle;
+                                            }
+                                        }
+                                    }
+                                    a {
+                                        border-radius: 0.3rem;
+                                        display: block;
+                                        padding: 12px 24px;
+                                        color: var(--c-text-shade);
+        
+                                        &:hover,
+                                        &[current-page="page"] {
+                                            color: var(--c-text);
+                                            background-color: var(--c-background-darker);
+                                        }
+                                    }
+                                }
+                            }
+                            &:hover {
+                                .sub-menu {
+                                    display: flex;
+                                }
+                            }
+                        }
+                    }
+                }
+                .mobile-toggle {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+/* Tablet horizontal */
+@media screen and (max-width: 1024px) {
+    header#l-header {
+
+        .middle-bar {
+
+            .widget-menu {
+
+                > ul {
+                    --header-height: 66px;
+                    z-index: 99;
+                    background-color: white;
+                    display: none !important;
+                    position: absolute;
+                    top: var(--header-height);
+                    left: 0;
+                    width: 100%;
+                    height: calc(100vh - var(--header-height));
+                    padding: 32px;
+                    flex-direction: column;
+                    overflow-y: auto;
+                    align-items: normal !important;
+
+                    > li.menu-item-has-children {
+
+                        > .sub-menu {
+                            margin-top: 8px;
+                        }
+                    }
+                    li {
+
+                        &.menu-item-has-children {
+
+                            .sub-menu {
+                                position: initial !important;
+                                display: none;
+                                animation: none !important;
+                                display: none !important;
+                                border: none !important;
+                                width: 100% !important;
+                                background-color: var(--c-background-darker) !important;
+
+                                li {
+                                    animation: fadeFromBottom var(--a-transition) forwards;
+                                }
+                            }
+                            &:focus-within {
+                                > .sub-menu {
+                                    display: block !important;
+                                }
+                            }
+                            a::after {
+                                background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><path d="M11.9997 13.1714L16.9495 8.22168L18.3637 9.63589L11.9997 15.9999L5.63574 9.63589L7.04996 8.22168L11.9997 13.1714Z"></path></svg>') !important;
+                            }
+                        }
+                    }
+                }
+                .mobile-toggle {
+                    display: block !important;
+                }
+                &[aria-expanded="true"] {
+                    ul {
+                        display: flex !important;
+                    }
+                }
+            }
+        }
+    }
+}
